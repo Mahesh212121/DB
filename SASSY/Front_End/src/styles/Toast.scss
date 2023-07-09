@@ -1,0 +1,18 @@
+@import "../styles/Variables.scss";
+
+.Toastify__toast-container {
+  max-width: $sm;
+  width: 100%;
+}
+
+.Toastify__toast {
+  font-family: inherit;
+  box-shadow: 3px 3px 10px 0 var(--shadow-color);
+  border-radius: $border-radius-sm;
+  margin: 1rem;
+}
+
+.Toastify__close-button {
+  margin-right: 0.75rem;
+  align-self: center;
+}

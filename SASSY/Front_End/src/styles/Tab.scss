@@ -1,0 +1,30 @@
+@import "../styles/Variables.scss";
+
+.react-tabs__tab {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  cursor: pointer;
+
+  bottom: -$border-width;
+
+  @media screen and (max-width: $md) {
+    padding: 0.5rem 1rem;
+  }
+}
+
+.react-tabs__tab-list {
+  border-bottom: $border-width solid var(--green);
+}
+
+.react-tabs__tab--selected {
+  border: $border-width solid var(--green);
+  border-bottom: none;
+  border-color: var(--green);
+  border-radius: $border-radius-sm $border-radius-sm 0 0;
+  color: inherit;
+  background-color: var(--secondary-background-color);
+}
+
+.react-tabs__tab:last-child {
+  margin-right: 0;
+}

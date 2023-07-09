@@ -1,0 +1,252 @@
+@import "./styles/Variables.scss";
+
+html {
+  font-size: 1rem;
+
+  @media screen and (max-width: $sm) {
+    font-size: 0.8125rem;
+  }
+}
+
+body {
+  color: var(--primary-color);
+}
+
+.section {
+  padding: 1rem $padding-lg 0 $padding-lg;
+  @media screen and (max-width: $md) {
+    padding-left: $padding-md;
+    padding-right: $padding-md;
+  }
+}
+
+.sx-wrapper {
+  max-width: $xl;
+}
+
+.s-wrapper {
+  max-width: $lg;
+}
+
+.p-wrapper {
+  max-width: $amd;
+}
+
+.dashboard {
+  margin-top: $app-margin-top;
+}
+
+.divider {
+  width: 40px;
+  height: 4px;
+  background-color: #f3ad0f;
+  margin: 0.5rem 0 1.2rem 0;
+
+  @media screen and (max-width: $lg) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.sx-wrapper,
+.s-wrapper,
+.p-wrapper,
+.center-element {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center-flex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.primary-heading {
+  font-family: "Bebas Neue", cursive;
+  color: var(--orange);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 5rem;
+  font-weight: 600;
+
+  margin-top: 1rem;
+
+  @media screen and (max-width: $lg) {
+    font-size: 4rem;
+  }
+  @media screen and (max-width: $md) {
+    font-size: 3rem;
+  }
+}
+
+.primary-heading-sm {
+  font-size: 1.5rem;
+  font-weight: 600;
+
+  @media screen and (max-width: $md) {
+    font-size: 1.2rem;
+  }
+}
+
+.secondary-heading {
+  font-size: 2rem;
+  margin: 2rem 0 1rem 0;
+
+  @media screen and (max-width: $md) {
+    font-size: 1.5rem;
+  }
+}
+
+.margin-divider {
+  margin: 6rem 0;
+}
+
+.margin-divider-sm {
+  margin: 3rem 0;
+}
+
+.margin-divider-xsm {
+  margin: 2rem 0;
+}
+
+.margin-divider-xxsm {
+  margin: 1.5rem 0;
+}
+
+.icon-select {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.center-text {
+  text-align: center;
+}
+
+button,
+.clickable {
+  cursor: pointer;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-primary-sm,
+.btn-secondary-sm {
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all $transition;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 1rem 2rem;
+  border-radius: $border-radius;
+  box-shadow: 0px 0px 10px 0 var(--shadow-color);
+
+  &:hover {
+    box-shadow: 3px 3px 10px 0 var(--shadow-color);
+  }
+}
+
+.btn-primary,
+.btn-primary-sm {
+  background: var(--light-green);
+  border: solid $border-width-sm var(--green);
+
+  &:hover {
+    background: var(--less-light-green);
+    border-color: var(--dark-green);
+  }
+}
+
+.btn-secondary,
+.btn-secondary-sm {
+  background: var(--light-orange);
+  border: solid $border-width-sm var(--orange);
+
+  &:hover {
+    background: var(--orange);
+    border-color: var(--dark-orange);
+  }
+}
+
+.btn-primary-sm,
+.btn-secondary-sm {
+  padding: 0.7rem 1rem;
+  border-radius: $border-radius-sm;
+}
+
+.submit-btn {
+  max-width: $xsm;
+  width: 100%;
+  display: block;
+  margin: 2rem auto 0 auto;
+}
+
+.form-container {
+  margin: 0 auto;
+  background-color: var(--secondary-background-color);
+  border-radius: $border-radius;
+  box-shadow: 0px 0px 10px 0 var(--shadow-color);
+
+  padding: $padding-lg;
+  @media screen and (max-width: $md) {
+    padding: $padding-md;
+  }
+
+  & form {
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 1rem 0.5rem;
+      border-radius: $border-radius-sm;
+
+      border: $border-width solid var(--green);
+      outline: none;
+      font-size: inherit;
+
+      transition: all $transition;
+      font-family: inherit;
+
+      &:focus {
+        border: $border-width solid var(--dark-green);
+        box-shadow: 0px 0px 10px 0 var(--shadow-color);
+      }
+    }
+
+    textarea {
+      resize: vertical;
+    }
+  }
+
+  & h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  & .form-container-div,
+  & .form-container-div-sm {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+
+    @media screen and (max-width: $amd) {
+      gap: 1rem;
+    }
+
+    & .span-full {
+      grid-column: 1 / -1;
+      margin: 1rem 0;
+
+      @media screen and (max-width: $amd) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  & .form-container-div-sm {
+    gap: 1rem;
+  }
+}

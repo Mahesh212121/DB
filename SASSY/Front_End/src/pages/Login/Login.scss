@@ -1,0 +1,10 @@
+@import "../../styles/Variables.scss";
+
+.login-form-container {
+  max-width: $xsm;
+  margin-top: 15vh;
+
+  & div.form-container-div-sm {
+    grid-template: none;
+  }
+}

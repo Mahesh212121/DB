@@ -1,0 +1,83 @@
+@import "../../styles/Variables.scss";
+
+.table-container > h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.table-search-container {
+  padding: 0 3px 0 3px;
+  margin-bottom: 1rem;
+}
+
+.table-search-input {
+  width: 100%;
+  background-color: inherit;
+  font-size: inherit;
+
+  padding: 0.5rem;
+
+  border: none;
+  border-bottom: $border-width solid var(--green);
+  transition: all $transition;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0px 15px 10px -15px var(--shadow-color);
+    border-bottom: $border-width solid var(--dark-green);
+  }
+}
+
+table.m-table {
+  border-collapse: separate;
+  overflow: hidden;
+  width: 100%;
+  border-radius: $border-radius;
+
+  box-shadow: 0px 0px 10px 0 var(--shadow-color);
+
+  th,
+  td {
+    padding: 12px;
+    text-align: left;
+  }
+
+  th {
+    background-color: var(--secondary-background-color);
+    font-weight: bold;
+  }
+
+  tbody {
+    tr {
+      &:nth-child(even) {
+        background-color: var(--secondary-background-color);
+        &.row-even {
+          background-color: var(--light-color);
+        }
+      }
+
+      &:nth-child(odd) {
+        &.row-odd {
+          background-color: var(--light-color);
+        }
+      }
+    }
+
+    .hover-row {
+      transition: all $transition;
+
+      &:hover {
+        background-color: var(--light-color);
+      }
+    }
+  }
+}
+
+.shrink-table {
+  @media screen and (max-width: $md) {
+    tr th:nth-child(1),
+    tr td:nth-child(1) {
+      display: none;
+    }
+  }
+}
